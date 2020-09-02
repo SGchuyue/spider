@@ -10,7 +10,7 @@ import (
 	"myproject.cn/spider/common/logger"
 	"myproject.cn/spider/http_server/global"
 	"myproject.cn/spider/http_server/routers"
-	"myproject.cn/spider/spider/pkg/setting"
+	"myproject.cn/spider/http_server/config"
 )
 
 // init 方法初始化应用程序流程
@@ -30,7 +30,7 @@ func init() {
 }
 
 func setupSetting() error {
-	s, err := setting.NewSetting()
+	s, err := config.NewSetting()
 	if err != nil {
 		return err
 	}
